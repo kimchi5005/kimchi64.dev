@@ -1,13 +1,18 @@
 /* ─── Variables ─────────────────────────────────────────── */
 :root {
     --bg: #0e0e0e;
+    /*背景*/
     --surface: #161616;
     --border: #252525;
-    --muted: #444;
-    --subtle: #888;
-    --body: #c8c8c8;
-    --heading: #f0f0f0;
-    --accent: #4a9eff;
+    /*線*/
+    --muted: #ffffff;
+    --subtle: #ffffff;
+    --body: #ffffff;
+    /*本文*/
+    --heading: #ffffff;
+    /*見出し*/
+    --accent: #ffffff;
+    /*一番上*/
     --tag: #2a2a2a;
 }
 
