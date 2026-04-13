@@ -107,11 +107,11 @@ a {
 }
 
 .bio {
-    max-width: 120px;
+    max-width: 580px;
     font-size: 0.88rem;
     color: var(--subtle);
     margin: 32px 0;
-    text-align: center;
+    text-align: left;
     word-break: break-all;
 }
 
