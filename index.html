@@ -5,16 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kimchi64.dev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+JP:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <div class="container">
+
         <header>
-            <div class="user-info">
+            <div class="top-bar">
+                <a href="index.html" class="site-title">kimchi64.dev</a>
+            </div>
+
+            <div class="profile">
                 <img src="https://avatars.githubusercontent.com/u/183417534?v=4" alt="icon" class="icon">
-                <div class="name-area">
+                <div class="profile-text">
                     <span class="name">kimchi</span>
                 </div>
             </div>
@@ -30,20 +40,48 @@
             </nav>
         </header>
 
-        <main>
-            <section>
-                <p>俺やって！ 俺！</p>
-            </section>
+        <p class="bio">俺やって！ 俺！</p>
 
+        <main>
             <section class="post-list">
-                <h3>Recent Posts</h3>
+                <div class="section-header">
+                    <h2>Recent Posts</h2>
+                </div>
                 <ul>
-                    <li><span class="post-title">なんか投稿したら</span><span class="date">Mar 10 2026</span></li>
-                    <li><span class="post-title">ここにでてくる</span><span class="date">Mar 10 2026</span></li>
-                    <li><span class="post-title">ようにする</span><span class="date">Mar 10 2026</span></li>
+                    <li>
+                        <span class="post-meta">#blog</span>
+                        <a class="post-title" href="#">まだ何もありません。</a>
+                        <span class="date">2026-04-13</span>
+                    </li>
+                    <li>
+                        <span class="post-meta">#mario</span>
+                        <a class="post-title" href="#">まだ何もありません。</a>
+                        <span class="date">2026-04-13</span>
+                    </li>
+                    <li>
+                        <span class="post-meta">#rust</span>
+                        <a class="post-title" href="#">まだ何もありません。</a>
+                        <span class="date">2026-04-13</span>
+                    </li>
+                    <li>
+                        <span class="post-meta">#valorant</span>
+                        <a class="post-title" href="#">まだ何もありません。</a>
+                        <span class="date">2026-04-13</span>
+                    </li>
+                    <li>
+                        <span class="post-meta">#Others</span>
+                        <a class="post-title" href="#">まだ何もありません。</a>
+                        <span class="date">2026-04-13</span>
+                    </li>
                 </ul>
             </section>
         </main>
+
+        <footer>
+            <span>kimchi64.dev</span>
+            <span>© 2026</span>
+        </footer>
+
     </div>
 
 </body>
