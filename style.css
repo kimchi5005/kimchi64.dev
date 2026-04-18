@@ -112,7 +112,6 @@ a {
     color: var(--subtle);
     margin: 32px 0;
     text-align: left;
-    word-break: break-all;
 }
 
 /* ─── Nav ───────────────────────────────────────────────── */
