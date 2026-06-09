@@ -6,102 +6,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>趣味 - kimchi64.dev</title>
     <link rel="icon" href="https://avatars.githubusercontent.com/u/183417534?v=4">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-    <div class="container">
-
-        <header>
-            <div class="top-bar">
-                <a href="../index.html" class="site-title">kimchi64.dev</a>
-            </div>
-
-            <div class="profile">
-                <img src="https://avatars.githubusercontent.com/u/183417534?v=4" alt="icon" class="icon">
-                <div class="profile-text">
-                    <span class="name">kimchi</span>
-                </div>
-            </div>
-
+    <div class="site-shell">
+        <header class="site-header">
+            <a class="brand" href="index.html">
+                <img src="https://avatars.githubusercontent.com/u/183417534?v=4" alt="kimchi icon">
+                <span>kimchi64.dev</span>
+            </a>
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="device.html">Device</a>
+                <a href="kakodevice.html">Past Device</a>
+                <a href="keireki.html">Timeline</a>
+                <a href="hobby.html" aria-current="page">Hobby</a>
+            </nav>
         </header>
 
         <main>
-            <section class="post-list">
-                <div class="section-header">
-                    <h2>きむちの趣味説明</h2>
-                </div>
-                <ul>
-                    <li>
-                        <span class="post-meta">#Hobby</span>
-                            <div>
-                            <p>マリオ系</p><br>
+            <section class="page-hero">
+                <p class="eyebrow">hobby notes</p>
+                <h1>趣味</h1>
+                <p class="lead">カードを押すと説明が開きます。普段は一覧だけ見えるようにしています。</p>
+            </section>
 
-                            マリオ系のゲームが一番好きです。<br>
-                            主に3Dマリオが大好きでマリオ64のRTAをやってました。<br>
-                            2025年2月21日に16枚NoLBLJで世界98位日本18位でした。<br>
-                            ShotGunMario 64というネタゲーで日本1位とってます。<br>
-                            あまり誇れないです<br>
-                            好きなキャラはキノピコです！<br><br>
+            <section class="section grid hobby-grid">
+                <details class="card hobby-card">
+                    <summary>
+                        <span class="meta">Games</span>
+                        <span class="summary-title">マリオ系</span>
+                        <span class="summary-note">3DマリオとSuper Mario 64 RTA。</span>
+                    </summary>
+                    <p>
+                        マリオ系のゲームが一番好きです。主に3Dマリオが好きで、Super Mario 64のRTAを触っています。
+                        ShotGunMario 64のようなネタ寄りのゲームも遊びます。好きなキャラはキノピコです。
+                    </p>
+                </details>
 
+                <details class="card hobby-card">
+                    <summary>
+                        <span class="meta">Hardware</span>
+                        <span class="summary-title">ガジェット</span>
+                        <span class="summary-note">PC周辺機器、ジャンク品、NASなど。</span>
+                    </summary>
+                    <p>
+                        ジャンク部品や中古の周辺機器を集めて、直したり組み合わせたりするのが好きです。
+                        ちゃんと動くものを安く作れたときがかなり楽しいです。
+                    </p>
+                </details>
 
+                <details class="card hobby-card">
+                    <summary>
+                        <span class="meta">Vehicles</span>
+                        <span class="summary-title">車とバイク</span>
+                        <span class="summary-note">乗り物とカスタムの記録。</span>
+                    </summary>
+                    <p>
+                        車はセダンや大きめの車が好きです。バイクも好きで、乗るだけでなく少しずつ触っていくのも楽しみです。
+                        乗り物は移動手段というより、触って変化を楽しめるものとして見ています。
+                    </p>
+                </details>
 
-                            <p>ハードウェア系</p><br>
-                            主にジャンク部品を集めて直して組み立てるのが好きです。<br>
-                            中古相場の半分ぐらいの値段でちゃんと動くってすごくない？<br><br>
+                <details class="card hobby-card">
+                    <summary>
+                        <span class="meta">Audio</span>
+                        <span class="summary-title">音響</span>
+                        <span class="summary-note">車内音響や音の環境づくり。</span>
+                    </summary>
+                    <p>
+                        いい音で音楽を聴くのが好きです。家では大きな音を出しにくいので、車内音響のほうに興味があります。
+                        小さな音でも質が良いとかなり気分が上がります。
+                    </p>
+                </details>
 
-                            <p>車.バイク</p><br>
-                            まずは車系で今はプリウスですがその前にLexus LS乗ってました。<br>
-                            セダンとフルサイズSUVとかが好きですが<br>
-                            今はハイエースに乗りたいです。<br>
-                            次にバイク系で前にゼファーχに乗ってました。<br>
-                            今はもう手放してストリートマジック2とバーディー50に<br>
-                            乗っていてどんどんカスタムしていこうと思ってます<br><br>
+                <details class="card hobby-card">
+                    <summary>
+                        <span class="meta">FPS</span>
+                        <span class="summary-title">FPS</span>
+                        <span class="summary-note">Valorant、Rustなど。</span>
+                    </summary>
+                    <p>
+                        FPSは長く遊んできたジャンルです。今は遊ぶ頻度に波がありますが、ValorantやRustなどを触っています。
+                        デバイスや設定を試すところも含めて好きです。
+                    </p>
+                </details>
 
-
-
-                            <p>音響</p><br>
-                            いい音で音楽を聴くっていいですよね<br>
-                            ただ、家がアパートなので家での音響に手を付けれません<br>
-                            ただ、車は違います<br>
-                            小さな音でも音質が良かったら脳汁がすごいです<br>
-                            もう車に100万以上音響系で使ってます。<br><br>
-
-
-
-                            <p>FPS系</p><br>
-                            今はやる頻度だいぶなくなりました。<br>
-                            一応シージの元プロですが2017年の話です<br>
-                            過去の栄光です<br>
-                            最高ランクはダイヤなのですが当時はそれが最高ランクでした。<br>
-                            Valorantもやってますが一生汗スタックです<br>
-                            何なら今の実力はゴールド以下です。<br><br>
-
-
-                            <p>釣り(料理)</p><br>
-
-                            魚料理が大好きで自分で調理したのが大好きです<br>
-                            それでたまに釣りとか行ったりしてます。<br>
-                            後、朝市で安い新鮮な魚を食べるのもいいよね<br>
-                            自分は香川生まれ香川育ちなのでやっぱりこれだけはお勧めしたい<br><br>
-
-                            オリーブハマチ
-                            </div>
-                        <span>
-                            
-                    </li>
-                </ul>
+                <details class="card hobby-card">
+                    <summary>
+                        <span class="meta">Food</span>
+                        <span class="summary-title">魚と料理</span>
+                        <span class="summary-note">魚料理と市場のメモ。</span>
+                    </summary>
+                    <p>
+                        魚料理が好きで、自分で調理するのも好きです。市場で新鮮な魚を見るのも楽しいです。
+                        香川育ちなので、オリーブハマチはおすすめしたいもののひとつです。
+                    </p>
+                </details>
             </section>
         </main>
 
-        <footer>
+        <footer class="site-footer">
             <span>kimchi64.dev</span>
             <span>© 2026</span>
         </footer>
-
     </div>
-
 </body>
 
 </html>

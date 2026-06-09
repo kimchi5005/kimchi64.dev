@@ -4,56 +4,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>過去使用デバイス - kimchi64.dev</title>
+    <title>過去デバイス - kimchi64.dev</title>
     <link rel="icon" href="https://avatars.githubusercontent.com/u/183417534?v=4">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-    <div class="container">
-
-        <header>
-            <div class="top-bar">
-                <a href="../index.html" class="site-title">kimchi64.dev</a>
-            </div>
-
-            <div class="profile">
-                <img src="https://avatars.githubusercontent.com/u/183417534?v=4" alt="icon" class="icon">
-                <div class="profile-text">
-                    <span class="name">kimchi</span>
-                </div>
-            </div>
-
+    <div class="site-shell">
+        <header class="site-header">
+            <a class="brand" href="index.html">
+                <img src="https://avatars.githubusercontent.com/u/183417534?v=4" alt="kimchi icon">
+                <span>kimchi64.dev</span>
+            </a>
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="device.html">Device</a>
+                <a href="kakodevice.html" aria-current="page">Past Device</a>
+                <a href="keireki.html">Timeline</a>
+                <a href="hobby.html">Hobby</a>
+            </nav>
         </header>
 
         <main>
-            <section class="post-list">
-                <div class="section-header">
-                    <h2>きむちの過去使用デバイス</h2>
+            <section class="page-hero">
+                <p class="eyebrow">past device</p>
+                <h1>過去デバイス</h1>
+                <p class="lead">以前使っていた機材の記録。カードをクリックすると型番をコピーできます。</p>
+            </section>
+
+            <section class="section">
+                <div class="section-title">
+                    <p class="kicker">past gear</p>
+                    <h2>以前使っていた機材</h2>
                 </div>
-                <ul>
-                    <li>
-                        <span class="post-meta">#Mouse</span>
-                        <span>
-                            無線マウスが普及する前までRazer DeathAdder Eliteをずっと使っていました<br>
-                            PCゲーを本気でプレイし始めてValorantを始める<br>
-                            まで約17年ほど使ってました。<br>
-                            (流石にDeathAdderシリーズ内で変えたりはしてましたが。。)<br>
-                            <img src="media/deathadderelite.png" width="150">
-                        </span>
-                    </li>
-                </ul>
+                <div class="grid">
+                    <article class="card copy-card" data-copy="Razer DeathAdder Elite" tabindex="0">
+                        <p class="meta">Mouse</p>
+                        <h3>Razer DeathAdder Elite</h3>
+                        <p>長く使っていた有線マウス。</p>
+                    </article>
+                    <article class="card copy-card" data-copy="G Pro X Superlight 2" tabindex="0">
+                        <p class="meta">Mouse</p>
+                        <h3>G Pro X Superlight 2</h3>
+                        <p>軽量無線マウスの基準として使っていた機材。</p>
+                    </article>
+                    <article class="card copy-card" data-copy="Logitech G640" tabindex="0">
+                        <p class="meta">Mousepad</p>
+                        <h3>Logitech G640</h3>
+                        <p>布系マウスパッド。</p>
+                    </article>
+                </div>
             </section>
         </main>
 
-        <footer>
+        <footer class="site-footer">
             <span>kimchi64.dev</span>
             <span>© 2026</span>
         </footer>
-
     </div>
 
+    <div class="copy-toast" role="status" aria-live="polite">コピーしました</div>
+    <script>
+        (() => {
+            const toast = document.querySelector(".copy-toast");
+            let timer;
+
+            const fallbackCopy = (text) => {
+                const textarea = document.createElement("textarea");
+                textarea.value = text;
+                textarea.setAttribute("readonly", "");
+                textarea.style.position = "fixed";
+                textarea.style.opacity = "0";
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand("copy");
+                textarea.remove();
+            };
+
+            const showToast = (x, y) => {
+                clearTimeout(timer);
+                toast.style.left = `${x + 12}px`;
+                toast.style.top = `${y + 12}px`;
+                toast.classList.add("is-visible");
+                timer = setTimeout(() => toast.classList.remove("is-visible"), 1400);
+            };
+
+            const copyFromCard = async (card, x, y) => {
+                const text = card.dataset.copy;
+                try {
+                    if (navigator.clipboard && window.isSecureContext) {
+                        await navigator.clipboard.writeText(text);
+                    } else {
+                        fallbackCopy(text);
+                    }
+                    showToast(x, y);
+                } catch {
+                    fallbackCopy(text);
+                    showToast(x, y);
+                }
+            };
+
+            document.querySelectorAll("[data-copy]").forEach((card) => {
+                card.addEventListener("click", (event) => {
+                    copyFromCard(card, event.clientX, event.clientY);
+                });
+
+                card.addEventListener("keydown", (event) => {
+                    if (event.key !== "Enter" && event.key !== " ") return;
+                    event.preventDefault();
+                    const rect = card.getBoundingClientRect();
+                    copyFromCard(card, rect.left + rect.width / 2, rect.top + rect.height / 2);
+                });
+            });
+        })();
+    </script>
 </body>
 
 </html>

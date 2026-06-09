@@ -10,79 +10,96 @@
 </head>
 
 <body>
-
-    <div class="container">
-
-        <header>
-            <div class="top-bar">
-                <a href="index.html" class="site-title">kimchi64.dev</a>
-            </div>
-
-            <div class="profile">
-                <img src="https://avatars.githubusercontent.com/u/183417534?v=4" alt="icon" class="icon">
-                <div class="profile-text">
-                    <span class="name">kimchi</span>
-                </div>
-            </div>
-
-            <nav>
-                <ul>
-                    <li><a href="device.html">使用デバイス</a></li>
-                    <li><a href="kakodevice.html">過去使用デバイス</a></li>
-                    <li><a href="keireki.html">経歴</a></li>
-                    <li><a href="hobby.html">趣味</a></li>
-
-                </ul>
+    <div class="site-shell">
+        <header class="site-header">
+            <a class="brand" href="index.html">
+                <img src="https://avatars.githubusercontent.com/u/183417534?v=4" alt="kimchi icon">
+                <span>kimchi64.dev</span>
+            </a>
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="device.html">Device</a>
+                <a href="kakodevice.html">Past Device</a>
+                <a href="keireki.html">Timeline</a>
+                <a href="hobby.html">Hobby</a>
             </nav>
         </header>
 
-        <p class="bio">
-            ※現在サイトを色々変えているので書き切れてない部分が大量にあります<br>
-            申し訳ございません。<br><br>
-
-            主に色んなゲームを触ってるきむちです！<br>
-            興味本位でWebサイトを作ってみたので暇な人はどんどん見ていってください！<br>
-            ゲーム<br>
-            マリオ系全般,SM64RTA,Valorant,Rust<br><br>
-            その他趣味<br>
-            ガジェット,ジャンク漁り,Ugreen公式 NASyncテスター<br>
-            釣り,魚系料理,車,バイク
-        </p>
-
         <main>
-            <section class="post-list">
-                <div class="section-header">
-                    <h2>Link</h2>
+            <section class="hero">
+                <div class="hero-copy">
+                    <div>
+                        <p class="eyebrow">personal log</p>
+                        <h1>kimchi64.dev</h1>
+                        <p class="lead">
+                            ゲーム、デバイス、趣味の記録を置いておくための小さなサイトです。
+                            詳しい内容は下のページに分けています。
+                        </p>
+                    </div>
+                    <div class="hero-links" aria-label="external links">
+                        <a href="https://github.com/kimchi5005"><span class="link-mark">GH</span>GitHub</a>
+                        <a href="https://note.com/kimchi2059"><span class="link-mark">No</span>note</a>
+                        <a href="https://x.com/kimchidayo_"><span class="link-mark">X</span>X</a>
+                        <a href="https://www.youtube.com/@%E3%81%8D%E3%82%80%E3%81%A1-w4t"><span class="link-mark">YT</span>YouTube</a>
+                    </div>
                 </div>
-                <ul>
-                    <li>
-                        <span class="post-meta">#開発系</span>
-                        <a class="post-title" href="https://github.com/kimchi5005">GitHub</a>
-                    </li>
-                    <li>
-                        <span class="post-meta">#ブログ</span>
-                        <a class="post-title" href="https://note.com/kimchi2059">Note</a>
-                    </li>
-                    <li>
-                        <span class="post-meta">#日常</span>
-                        <a class="post-title" href="https://x.com/kimchidayo_">X(旧Twitter)</a>
-                    </li>
-                    <li>
-                        <span class="post-meta">#動画</span>
-                        <a class="post-title"
-                            href="https://www.youtube.com/@%E3%81%8D%E3%82%80%E3%81%A1-w4t">Youtube</a>
-                    </li>
-                </ul>
+
+                <aside class="side-panel">
+                    <div class="status-row">
+                        <img src="https://avatars.githubusercontent.com/u/183417534?v=4" alt="kimchi icon">
+                        <div>
+                            <strong>kimchi</strong>
+                            <span>site owner</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="kicker">focus</p>
+                        <p>SM64 RTA、FPS、ガジェット、乗り物など。細かい話は各ページに分けています。</p>
+                    </div>
+                    <div class="tag-cloud" aria-label="site topics">
+                        <span>SM64</span>
+                        <span>FPS</span>
+                        <span>Device</span>
+                        <span>Hardware</span>
+                    </div>
+                </aside>
             </section>
+
+            <section class="section">
+                <div class="section-title">
+                    <p class="kicker">contents</p>
+                    <h2>サイト内ページ</h2>
+                </div>
+                <div class="grid">
+                    <a class="card" href="device.html">
+                        <p class="meta">current</p>
+                        <h3>使用デバイス</h3>
+                        <p>今使っている周辺機器のメモ。</p>
+                    </a>
+                    <a class="card" href="kakodevice.html">
+                        <p class="meta">past device</p>
+                        <h3>過去デバイス</h3>
+                        <p>以前使っていた機材の記録。</p>
+                    </a>
+                    <a class="card" href="keireki.html">
+                        <p class="meta">timeline</p>
+                        <h3>経歴</h3>
+                        <p>ゲームや活動の簡単なログ。</p>
+                    </a>
+                    <a class="card" href="hobby.html">
+                        <p class="meta">hobby</p>
+                        <h3>趣味</h3>
+                        <p>好きなものをジャンル別に整理。</p>
+                    </a>
+                </div>
+            </section>
+
         </main>
 
-        <footer>
+        <footer class="site-footer">
             <span>kimchi64.dev</span>
             <span>© 2026</span>
         </footer>
-
     </div>
-
 </body>
 
 </html>
