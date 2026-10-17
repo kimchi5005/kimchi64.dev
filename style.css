@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap");
 
 :root {
-    --bg: #07090c;
-    --bg-soft: #0c1016;
-    --panel: #10151d;
-    --panel-2: #131922;
-    --text: #edf2f7;
-    --muted: #8b98a8;
-    --quiet: #5f6b7a;
-    --line: rgba(237, 242, 247, 0.11);
-    --accent: #7dd3fc;
-    --accent-2: #f97316;
-    --shadow: 0 20px 60px rgba(0, 0, 0, 0.32);
+    --bg: #111210;
+    --bg-soft: #151613;
+    --panel: #191a17;
+    --panel-2: #1e1f1b;
+    --text: #e7e5de;
+    --muted: #aaa99f;
+    --quiet: #797a72;
+    --line: rgba(231, 229, 222, 0.10);
+    --accent: #b9b39f;
+    --accent-2: #8d8a80;
+    --shadow: 0 12px 32px rgba(0, 0, 0, 0.20);
 }
 
 *,
@@ -24,10 +24,7 @@ body {
     margin: 0;
     min-height: 100vh;
     color: var(--text);
-    background:
-        radial-gradient(circle at 18% 0%, rgba(125, 211, 252, 0.13), transparent 28rem),
-        radial-gradient(circle at 92% 10%, rgba(249, 115, 22, 0.10), transparent 24rem),
-        linear-gradient(180deg, #07090c 0%, #0a0d12 48%, #07090c 100%);
+    background: var(--bg);
     font-family: "Noto Sans JP", system-ui, sans-serif;
     line-height: 1.75;
     -webkit-font-smoothing: antialiased;
@@ -113,7 +110,7 @@ img {
 .timeline-item,
 .link-list a {
     border: 1px solid var(--line);
-    background: linear-gradient(180deg, rgba(19, 25, 34, 0.92), rgba(12, 16, 22, 0.92));
+    background: var(--panel);
     border-radius: 8px;
     box-shadow: var(--shadow);
 }
@@ -200,7 +197,7 @@ p {
 
 .hero-links a:hover {
     color: var(--text);
-    border-color: rgba(125, 211, 252, 0.32);
+    border-color: rgba(185, 179, 159, 0.38);
 }
 
 .hero-links .link-mark {
@@ -284,7 +281,7 @@ p {
 }
 
 .copy-card:focus-visible {
-    outline: 2px solid rgba(125, 211, 252, 0.72);
+    outline: 2px solid rgba(185, 179, 159, 0.72);
     outline-offset: 3px;
 }
 
@@ -370,7 +367,7 @@ p {
 
 .card:hover,
 .link-list a:hover {
-    border-color: rgba(125, 211, 252, 0.32);
+    border-color: rgba(185, 179, 159, 0.38);
 }
 
 .link-list {
